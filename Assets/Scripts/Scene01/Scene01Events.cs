@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class Scene01Events : MonoBehaviour
 {
@@ -135,8 +136,9 @@ public class Scene01Events : MonoBehaviour
         charDoomGuy.SetActive(true);
         charIsabelleSerious.SetActive(true);
         textBox.SetActive(true);
-        yield return new WaitForSeconds(2);
         fadeOut.SetActive(true);
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(1);
     }
     public void NextButton()
     {
